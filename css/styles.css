@@ -7,15 +7,68 @@ body {
   height: 100vh;
   width: 100vw;
   background-image: url('../images/background.png');
-  background-position: center bottom;
-  background-repeat: no-repeat;
+  background-position: center bottom;     /*Propiedad de background-image para mover la imagen*/
+  background-repeat: no-repeat;         /*No se repita la imagene en mosaico*/
 }
 
 .cvander {
-  background: red;
+  /*background: red;*/
   width: 166px;
   height: 171px;
   position: absolute;
   left: 150px;
   bottom: 0;
+  overflow: hidden;         /*Ocultar el resto de elementos por debajo de la caja*/
+  transition: .3s;
+  /*animation: tiempo nombre de la animacion;*/
+}
+
+.cvander:hover {
+  /*background: blue;*/
+}
+
+.cvander:hover .cvander-head {
+  /*border: 10px solid red;*/
+  /*transform: translateY(7px);*/       /*Se muebe la imagen 7 px hacia abajo*/
+  animation: .7s cvander infinite;
+}
+
+.cvander:hover .cvander-ipad {
+  transform: rotate(-7deg);
+}
+
+.cvander-body {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.cvander-head {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.3s;         /*Tiempo de la transicion*/
+}
+
+.cvander-ipad {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  transition: .3s;
+}
+
+@keyframes cvander {     /*Propiedad para definir la animacion*/
+    /*0% - 50% - 100%*/
+    /*from {
+        border: 1px solid red;
+    }
+    to {
+      transform: translateY(5px);
+    }*/
+    50% {
+      transform: translateY(5px) rotate(2deg);
+    }
+    100% {
+      transform: translateY(0px);
+    }
 }
