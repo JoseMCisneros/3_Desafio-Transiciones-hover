@@ -3,12 +3,23 @@ body {
   margin: 0;
 }
 
+.cvander-land {
+  width: 1024px;
+  height: 243px;
+  background-image: url('../images/background.png');
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
 .container {
   height: 100vh;
   width: 100vw;
-  background-image: url('../images/background.png');
-  background-position: center bottom;     /*Propiedad de background-image para mover la imagen*/
-  background-repeat: no-repeat;         /*No se repita la imagene en mosaico*/
+  /*background-image: url('../images/background.png');
+  background-position: center bottom;*/     /*Propiedad de background-image para mover la imagen
+  background-repeat: no-repeat;*/         /*No se repita la imagene en mosaico*/
 }
 
 .cvander {
@@ -16,7 +27,7 @@ body {
   width: 166px;
   height: 171px;
   position: absolute;
-  left: 150px;
+  left: 0;
   bottom: 0;
   overflow: hidden;         /*Ocultar el resto de elementos por debajo de la caja*/
   transition: .3s;
